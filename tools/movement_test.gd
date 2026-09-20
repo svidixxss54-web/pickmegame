@@ -37,6 +37,9 @@ func _run() -> void:
 	if player.velocity.y >= -100.0:
 		_fail("Player did not jump")
 		return
+	if not scene.get_node("JumpSound").playing:
+		_fail("Jump sound did not play")
+		return
 
 	print("Movement test passed")
 	quit()

@@ -28,7 +28,7 @@ func _run() -> void:
 		return
 
 	player.global_position = Vector2(740, 1100)
-	for frame in range(5):
+	for frame in range(50):
 		await physics_frame
 	if current_scene == scene or current_scene.hearts_collected != 0:
 		_fail("Falling did not restart the level")

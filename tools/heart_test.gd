@@ -24,5 +24,9 @@ func _run() -> void:
 		push_error("Score label is out of sync")
 		quit(1)
 		return
+	if not scene.get_node("HeartSound").playing:
+		push_error("Heart pickup sound did not play")
+		quit(1)
+		return
 	print("Heart pickup test passed")
 	quit()

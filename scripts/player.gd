@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 signal fell
+signal jumped
 
 const SPEED := 370.0
 const ACCELERATION := 2400.0
@@ -32,6 +33,7 @@ func _physics_process(delta: float) -> void:
 		velocity.y = JUMP_VELOCITY
 		jump_timer = 0.0
 		coyote_timer = 0.0
+		jumped.emit()
 
 	var direction := Input.get_axis("left", "right")
 	if direction != 0.0:
