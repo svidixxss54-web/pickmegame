@@ -6,8 +6,8 @@ const CLOUD := Color("#fff6fb")
 
 
 func _draw() -> void:
-	for strip in range(36):
-		var color := SKY_TOP.lerp(SKY_BOTTOM, strip / 35.0)
+	for strip in range(56):
+		var color := SKY_TOP.lerp(SKY_BOTTOM, minf(strip / 35.0, 1.0))
 		draw_rect(Rect2(-200, strip * 24 - 120, 5600, 24), color)
 
 	for i in range(17):

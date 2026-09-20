@@ -20,7 +20,7 @@ func _run() -> void:
 		push_error("Heart pickup did not update the score")
 		quit(1)
 		return
-	if scene.get_node("HUD/Score").text != "HEARTS  1 / 3":
+	if scene.get_node("HUD/Score").text != "HEARTS  1 / 8":
 		push_error("Score label is out of sync")
 		quit(1)
 		return
